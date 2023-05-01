@@ -29,7 +29,3 @@ In the application there are four different urls that can be reached: */*, */log
 */logout* - once entered the user can be Logged Out
 A user can create an account, then log in into his/her homepage and register for an interested sport discipline, and afer that the user can delete that registration from a list.
 In *users.db* database there are three tables: users, sports and enrollment (joined table). Users' table is made to save the user information by name and hashed value of the password provided, Sports' table is served for storing all sports available at that moment, and enrollment table is made to join that two tables together (many to many relationship).
-
-#### Thankful words
-
-I would like to express my gratitude to CS50 course creators, especially to Mister David Malan who has conducted this course and taught millions of students like me Data Structures, and not only, in a very comprehensive way. Thank you very much for doing this great work.
