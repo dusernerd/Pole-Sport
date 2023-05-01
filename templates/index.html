@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+Welcome!
+
+{% endblock %}
+{% block pole %}
+<form action="/logout" method="get">
+    <button type="submit" name="logout">Log Out</button>
+</form>
+
+{% endblock %}
+{% block main %}
+{% for mesg in get_flashed_messages() %}
+      <h1 class="green">{{ mesg }}</h1>
+
+{% endfor %}
+
+
+<h1>Welcome {{name}} !</h1>
+<h2>Please choose a sport</h2>
+<form action="/" method="post">
+    <select name="reg_sport">
+        <option disabled selected>Select</option>
+        {% for sport in sports %}
+            <option value="{{ sport['id'] }}">{{ sport["sport"] }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <button type="submit">Subscribe </button>
+</form>
+<form action="/" method="post">
+    <select name="des_sport">
+        <option disabled selected>Select</option>
+        {% for sport in sports %}
+            <option value="{{ sport['id'] }}">{{ sport["sport"] }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <button type="submit">Unsubscribe </button>
+</form>
+<form action="/" method="get">
+    <table class="table" name="sport">
+        <thead>
+            <tr>
+                <th scope="col">Sports Registered</th>
+            </tr>
+    </thead>
+    <tbody>
+
+        {% for d in data %}
+        <tr>
+
+
+        <td td value="{{ d['id'] }}">{{ d["sport"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</form>
+
+{% endblock %}
