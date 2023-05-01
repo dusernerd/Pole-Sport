@@ -1,5 +1,5 @@
 # Pole Sport
-### Video Demo: https://youtu.be/aGfSj98vE2c
+
 ### Introduction
 
 Universities tend to provide different outdoor activities for their students, and sport is one of them. It is nice to have a platform that would allow students to make an online inscription for their favourite sports. This web application is made to facilitate that process.
